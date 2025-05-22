@@ -30,6 +30,7 @@ limitations under the License.
 #include "tensorflow/lite/c/builtin_op_data.h"
 #include "tensorflow/lite/kernels/kernel_util.h"
 #include "timer.h"
+#include "tensorflow/lite/micro/micro_profiler.h"
 
 static const tflite::Model* s_model = nullptr;
 static tflite::MicroInterpreter* s_interpreter = nullptr;
@@ -79,34 +80,21 @@ status_t MODEL_Init(void)
 }
 
 status_t MODEL_RunInference(void) {
-    // Get the execution plan from the interpreter
-    const auto& nodes_and_registration = s_interpreter->nodes_and_registration();
-    const int* execution_plan = s_interpreter->execution_plan();
-    int execution_plan_size = s_interpreter->execution_plan_size();
+    // Run the whole inference as usual
+    uint32_t start_total = TIMER_GetTimeInUS();
+    TfLiteStatus status = s_interpreter->Invoke();
+    uint32_t end_total = TIMER_GetTimeInUS();
 
-    // Loop through the execution plan and invoke each node
-    for (int i = 0; i < execution_plan_size; ++i) {
-        int node_index = execution_plan[i];
-        const TfLiteNode& node = nodes_and_registration[node_index].first;
-        const TfLiteRegistration& registration = nodes_and_registration[node_index].second;
-
-        uint32_t start = TIMER_GetTimeInUS();
-
-        // Invoke the node
-        if (registration.invoke(s_interpreter->context(), &node) != kTfLiteOk) {
-            PRINTF("Invoke failed for node %d!\r\n", i);
-            return kStatus_Fail;
-        }
-
-        uint32_t end = TIMER_GetTimeInUS();
-        uint32_t duration = end - start;
-
-        const char* op_name = tflite::GetStringFromOpCode(static_cast<tflite::BuiltinOperator>(registration.builtin_code));
-        if (op_name == nullptr) {
-            op_name = "Custom"; // Handle custom operations
-        }
-        PRINTF("Layer %d (%s) took %lu ticks\r\n", i, op_name, duration);
+    if (status != kTfLiteOk) {
+        PRINTF("Model inference failed!\r\n");
+        return kStatus_Fail;
     }
+
+    PRINTF("Total inference time: %lu us\r\n", end_total - start_total);
+
+    // You CANNOT time individual layers like this without internal access,
+    // unless you subclass or modify the interpreter.
+
     return kStatus_Success;
 }
 
