@@ -1,0 +1,4 @@
+startup/startup_mcxn947_cm33_core0.o startup/startup_mcxn947_cm33_core0.d: \
+ ../startup/startup_mcxn947_cm33_core0.cpp \
+ C:\Users\Domen\Documents\MULTIMEDIJA\Diploma\Implementation\FreeRTOS_implementation_Mobilenet_Project_Gorkem_Salman\frdmmcxn947_tflm_label_image_cm33_core0\source\mcux_config.h
+C:\Users\Domen\Documents\MULTIMEDIJA\Diploma\Implementation\FreeRTOS_implementation_Mobilenet_Project_Gorkem_Salman\frdmmcxn947_tflm_label_image_cm33_core0\source\mcux_config.h:

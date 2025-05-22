@@ -1,0 +1,6 @@
+../source/main.cpp:24:6:void MobileNetTask1(void*)	80	static
+../source/main.cpp:72:6:void RealTimeTask(void*)	16	static
+../source/main.cpp:83:17:void vApplicationTickHook()	16	static
+../source/main.cpp:96:17:void vApplicationMallocFailedHook()	8	static
+../source/main.cpp:103:17:void vApplicationStackOverflowHook(TaskHandle_t, char*)	16	static
+../source/main.cpp:110:5:int main()	16	static

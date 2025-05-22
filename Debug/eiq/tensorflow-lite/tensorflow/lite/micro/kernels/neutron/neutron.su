@@ -1,0 +1,8 @@
+C:/nxp/MCUXpressoIDE_24.12.148/ide/plugins/com.nxp.mcuxpresso.tools.win32_24.12.0.202407110909/tools/arm-none-eabi/include/c++/13.2.1/arm-none-eabi/thumb/v8-m.main+fp/hard/bits/gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+C:\Users\Domen\Documents\MULTIMEDIJA\Diploma\Implementation\FreeRTOS_implementation_Mobilenet_Project_Gorkem_Salman\frdmmcxn947_tflm_label_image_cm33_core0\eiq\tensorflow-lite/tensorflow/lite/micro/micro_context.h:132:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+../eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:58:7:void* tflite::{anonymous}::Init(TfLiteContext*, const char*, size_t)	32	static
+../eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:72:14:TfLiteStatus tflite::{anonymous}::Prepare(TfLiteContext*, TfLiteNode*)	64	static
+../eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:132:14:TfLiteStatus tflite::{anonymous}::Eval(TfLiteContext*, TfLiteNode*)	48	static
+../eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:180:6:void tflite::{anonymous}::Free(TfLiteContext*, void*)	24	static
+../eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:206:19:TFLMRegistration* tflite::Register_NEUTRON_GRAPH()	16	static
+../eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:212:13:const char* tflite::GetString_NEUTRON_GRAPH()	4	static

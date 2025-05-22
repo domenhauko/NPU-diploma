@@ -1,0 +1,6 @@
+freertos/corejson/source/core_json.o freertos/corejson/source/core_json.d: \
+ ../freertos/corejson/source/core_json.c \
+ C:\Users\Domen\Documents\MULTIMEDIJA\Diploma\Implementation\FreeRTOS_implementation_Mobilenet_Project_Gorkem_Salman\frdmmcxn947_tflm_label_image_cm33_core0\source\mcux_config.h \
+ C:\Users\Domen\Documents\MULTIMEDIJA\Diploma\Implementation\FreeRTOS_implementation_Mobilenet_Project_Gorkem_Salman\frdmmcxn947_tflm_label_image_cm33_core0\freertos\corejson\source\include/core_json.h
+C:\Users\Domen\Documents\MULTIMEDIJA\Diploma\Implementation\FreeRTOS_implementation_Mobilenet_Project_Gorkem_Salman\frdmmcxn947_tflm_label_image_cm33_core0\source\mcux_config.h:
+C:\Users\Domen\Documents\MULTIMEDIJA\Diploma\Implementation\FreeRTOS_implementation_Mobilenet_Project_Gorkem_Salman\frdmmcxn947_tflm_label_image_cm33_core0\freertos\corejson\source\include/core_json.h:
